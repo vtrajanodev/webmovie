@@ -1,5 +1,3 @@
 export const Finalize = () => {
-  return (
-    <div>index</div>
-  )
+  return <div>Finalize page</div>
 }

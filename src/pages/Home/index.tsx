@@ -1,5 +1,12 @@
+import { MovieCard } from "../../components/MovieCard"
+
 export const Home = () => {
   return (
-    <div>index</div>
+    <>
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+    </>
   )
 }

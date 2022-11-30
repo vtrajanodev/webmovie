@@ -1,13 +1,16 @@
-import { Button } from "./components/Button"
+import { BrowserRouter } from 'react-router-dom'
+import { Header } from './components/Header'
+import { Home } from './pages/Home'
+import { Router } from './routes/Router'
+import { GlobalStyle } from './styles/global'
 
 export function App() {
-
   return (
     <>
-      <Button variant="primary" width="homeButton"/>
-      <Button variant="secondary"/>
-      <Button variant="primary"/>
-      <Button variant="secondary"/>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   )
 }

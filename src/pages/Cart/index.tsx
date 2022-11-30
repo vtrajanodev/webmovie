@@ -1,7 +1,7 @@
-
+import { EmptyStateCart } from "../../components/EmptyStateCart"
 
 export const Cart = () => {
   return (
-    <div>index</div>
+    <EmptyStateCart />
   )
 }
