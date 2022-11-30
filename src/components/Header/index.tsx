@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { HeaderStyled } from './Header.styles'
 
 export const Header = () => {
@@ -6,7 +7,9 @@ export const Header = () => {
       <h2>Web Movies</h2>
 
       <div>
-        <p>Meu carrinho</p>
+        <Link to="/cart">
+          Meu carrinho
+        </Link>
         <span>0 itens</span>
       </div>
     </HeaderStyled>

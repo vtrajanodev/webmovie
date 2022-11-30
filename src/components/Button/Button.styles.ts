@@ -25,8 +25,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   color: black;
   font-weight: 700;
   border: none;
-
-  background-color: ${(props) => props.theme.gray};
+  cursor: pointer;
+  color: #FFF;
 
   ${({ variant, width }) => {
     return css`

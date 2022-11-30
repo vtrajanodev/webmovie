@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   max-width: 960px;
@@ -8,7 +8,6 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   h1 {
     font-size: 1.25rem;
   }
@@ -18,7 +17,24 @@ export const HeaderStyled = styled.header`
     font-size: 0.875rem;
   }
 
-  span {
-    color: #999999;
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    
+    p {
+      font-size: 14px;
+    }
+
+    a {
+    text-decoration: none;
+    color: #FFF;
   }
-`
+
+    span {
+      color: #999999;
+      align-self: flex-end;
+      font-size: 12px;
+    }
+  }
+`;
