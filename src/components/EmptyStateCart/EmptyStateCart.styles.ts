@@ -15,7 +15,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-/* border: 1px solid red; */
   h1 {
     font-size: 20px;
     color: black;
