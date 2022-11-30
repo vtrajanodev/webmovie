@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderStyled = styled.header`
   max-width: 960px;
@@ -21,4 +21,4 @@ export const HeaderStyled = styled.header`
   span {
     color: #999999;
   }
-`;
+`

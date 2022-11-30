@@ -1,23 +1,23 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-export type ButtonVariant = "primary" | "secondary";
-export type ButtonWidth = "homeButton" | "emptyCartButton" | "finalizeButton";
+export type ButtonVariant = 'primary' | 'secondary'
+export type ButtonWidth = 'homeButton' | 'emptyCartButton' | 'finalizeButton'
 
 interface ButtonContainerProps {
-  variant: ButtonVariant;
-  width: ButtonWidth;
+  variant: ButtonVariant
+  width: ButtonWidth
 }
 
 const buttonVariants = {
-  primary: "#009EDD",
-  secondary: "#039B00",
-};
+  primary: '#009EDD',
+  secondary: '#039B00',
+}
 
 const buttonWidhts = {
-  homeButton: "280px",
-  emptyCartButton: "180px",
-  finalizeButton: "235px",
-};
+  homeButton: '280px',
+  emptyCartButton: '180px',
+  finalizeButton: '235px',
+}
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   height: 40px;
@@ -32,6 +32,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     return css`
       background-color: ${buttonVariants[variant]};
       width: ${buttonWidhts[width]};
-    `;
+    `
   }}
-`;
+`

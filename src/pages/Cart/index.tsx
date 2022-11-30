@@ -1,7 +1,3 @@
-
-
 export const Cart = () => {
-  return (
-    <h2>oi</h2>
-  )
+  return <h2>Cart</h2>
 }

@@ -1,7 +1,7 @@
-import { Header } from "../../components/Header"
+import { MovieCard } from "../../components/MovieCard"
 
 export const Home = () => {
   return (
-    <h1>oi</h1>
+    <MovieCard />
   )
 }
