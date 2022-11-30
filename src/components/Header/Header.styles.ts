@@ -17,19 +17,13 @@ export const HeaderStyled = styled.header`
     font-size: 0.875rem;
   }
 
-  
   div {
     display: flex;
     flex-direction: column;
-    
+
     p {
       font-size: 14px;
     }
-
-    a {
-    text-decoration: none;
-    color: #FFF;
-  }
 
     span {
       color: #999999;
