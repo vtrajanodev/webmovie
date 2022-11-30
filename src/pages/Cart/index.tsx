@@ -2,6 +2,6 @@
 
 export const Cart = () => {
   return (
-    <div>index</div>
+    <h2>oi</h2>
   )
 }

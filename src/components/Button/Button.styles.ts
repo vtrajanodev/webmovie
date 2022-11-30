@@ -9,8 +9,8 @@ interface ButtonContainerProps {
 }
 
 const buttonVariants = {
-  primary: '#009EDD',
-  secondary: '#039B00'
+  primary: "#009EDD",
+  secondary: "#039B00",
 };
 
 const buttonWidhts = {
@@ -21,12 +21,12 @@ const buttonWidhts = {
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   height: 40px;
-  border-radius: 0.20rem;
-  color: #FFF;
+  border-radius: 0.2rem;
+  color: black;
   font-weight: 700;
   border: none;
 
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.theme.gray};
 
   ${({ variant, width }) => {
     return css`

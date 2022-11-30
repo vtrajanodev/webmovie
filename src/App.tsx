@@ -1,13 +1,14 @@
-import { Button } from "./components/Button"
+import { Header } from "./components/Header"
+import { Home } from "./pages/Home"
+import { GlobalStyle } from "./styles/global"
 
 export function App() {
 
   return (
     <>
-      <Button variant="primary" width="homeButton"/>
-      <Button variant="secondary"/>
-      <Button variant="primary"/>
-      <Button variant="secondary"/>
+      <Header />
+      <Home />
+      <GlobalStyle />
     </>
   )
 }

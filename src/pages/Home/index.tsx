@@ -1,5 +1,7 @@
+import { Header } from "../../components/Header"
+
 export const Home = () => {
   return (
-    <div>index</div>
+    <h1>oi</h1>
   )
 }
