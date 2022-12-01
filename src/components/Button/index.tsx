@@ -3,18 +3,18 @@ interface ButtonProps {
   variant?: ButtonVariant
   width?: ButtonWidth
   buttonText?: string
-  onClick: Function
+  onClick?: Function
 }
 
 export const Button = ({
   variant = 'primary',
   width = 'homeButton',
   buttonText,
-  onClick 
+  onClick,
 }: ButtonProps) => {
   return (
     <ButtonContainer width={width} variant={variant} onClick={() => onClick}>
-      {buttonText} 
+      {buttonText}
     </ButtonContainer>
   )
 }

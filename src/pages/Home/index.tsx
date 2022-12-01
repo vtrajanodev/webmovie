@@ -16,7 +16,7 @@ export const Home = () => {
 
   const handleAddMovieToCart = (movie: MovieModel) => {
     setMoviesSelected([...moviesSelected, movie])
-    // console.log(moviesSelected)
+    console.log(moviesSelected)
   }
 
   const fetchData = async () => {
