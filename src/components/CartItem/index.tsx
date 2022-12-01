@@ -1,8 +1,9 @@
-import minusIcon from '../../assets/minus-icon.png'
-import plusIcon from '../../assets/plus-icon.png'
-import img from '../../assets/product-cart-img.png'
-import trashIcon from '../../assets/trash-icon.png'
-import { CartItemContent } from './CartItem.styles'
+import { useContext } from 'react';
+import minusIcon from '../../assets/minus-icon.png';
+import plusIcon from '../../assets/plus-icon.png';
+import trashIcon from '../../assets/trash-icon.png';
+import { CartContext } from '../../context/CartContext';
+import { CartItemContent } from './CartItem.styles';
 
 interface CartItemProps {
   id?: number;
@@ -11,8 +12,16 @@ interface CartItemProps {
   image?: string;
 }
 
+export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-export const CartItem = ({title, price, image} : CartItemProps) => {
+  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
+
+  const handleRemoveMovieFromCart = () => {
+    const list = moviesSelected?.filter(movie => movie.id !== id)
+    console.log(moviesSelected)
+    setMoviesSelected(list)
+  }
+
   return (
     <CartItemContent>
       <td>
@@ -35,7 +44,9 @@ export const CartItem = ({title, price, image} : CartItemProps) => {
         <span>R$ 29,99</span>
       </td>
       <td>
-        <button><img src={trashIcon} alt="" /></button>
+        <button onClick={() => handleRemoveMovieFromCart()}>
+          <img src={trashIcon} alt="" />
+        </button>
       </td>
     </CartItemContent>
   )

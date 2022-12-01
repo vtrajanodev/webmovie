@@ -9,7 +9,7 @@ import { CartContainer, FooterCartContainer } from "./Cart.styles"
 
 export const Cart = () => {
 
-  const { moviesSelected } = useContext(CartContext)
+  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
   console.log(moviesSelected)
 
   return (
@@ -36,7 +36,7 @@ export const Cart = () => {
           <hr />
           <FooterCartContainer>
             <Link to="/finalize">
-              <ButtonContainer width='finalizeButton' variant='primary'>
+              <ButtonContainer onClick={() => setMoviesSelected([])} width='finalizeButton' variant='primary'>
                 Finalizar pedido
               </ButtonContainer>
             </Link>
