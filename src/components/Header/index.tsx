@@ -4,7 +4,9 @@ import { HeaderStyled } from './Header.styles'
 export const Header = () => {
   return (
     <HeaderStyled>
-      <h2>Web Movies</h2>
+      <Link to="/">
+        <h2>Web Movies</h2>
+      </Link>
 
       <div>
         <Link to="/cart">
