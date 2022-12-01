@@ -9,7 +9,7 @@ export const Finalize = () => {
       <FinalizePageContent>
         <h1>Compra realizada com sucesso</h1>
         <img src={img} alt="" />
-        <Link to="/"><Button width="finalizeButton" buttonText="Voltar" /></Link>
+        <Link to="/"><Button width="emptyCartButton" buttonText="Voltar" /></Link>
       </FinalizePageContent>
     </FinalizePageContainer>
   )

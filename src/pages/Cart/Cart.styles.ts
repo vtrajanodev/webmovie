@@ -5,16 +5,12 @@ export const CartContainer = styled.div`
   height: 286px;
   background-color: #fff;
   border-radius: 4px;
-
+  
   margin: 24px auto;
-`;
-
-export const CartItem = styled.div`
 
   table {
     color: black;
     width: 100%;
-    margin: 0 auto;
     font-weight: 700;
     text-align: left;
     border-spacing: 24px 21px;
@@ -52,7 +48,7 @@ export const CartItem = styled.div`
         height: 26px;
         border: 1px solid #999999;
         border-radius: 4px;
-        padding:8px;
+        padding: 12px;
       }
 
       &:last-child {
@@ -67,4 +63,4 @@ export const CartItem = styled.div`
   margin: 0 auto;
   color: #999999;
 }
-`;
+`
