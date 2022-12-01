@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const CartContainer = styled.div`
   max-width: 960px;
-  height: 286px;
   background-color: #fff;
   border-radius: 4px;
   font-weight: 700;
@@ -44,6 +43,7 @@ export const FooterCartContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 21px 24px;
+  padding-bottom: 24px;
 
   div {
     display: flex;

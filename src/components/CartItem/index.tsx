@@ -4,16 +4,23 @@ import img from '../../assets/product-cart-img.png'
 import trashIcon from '../../assets/trash-icon.png'
 import { CartItemContent } from './CartItem.styles'
 
+interface CartItemProps {
+  id?: number;
+  title?: string;
+  price?: number;
+  image?: string;
+}
 
-export const CartItem = () => {
+
+export const CartItem = ({title, price, image} : CartItemProps) => {
   return (
     <CartItemContent>
       <td>
         <div>
-          <img src={img} alt="" />
+          <img src={image} alt="" />
           <div>
-            <h4>Homen Aranha</h4>
-            <span>R$ 29,90</span>
+            <h4>{title}</h4>
+            <span>{price}</span>
           </div>
         </div>
       </td>
