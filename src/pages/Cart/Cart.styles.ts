@@ -10,9 +10,11 @@ export const CartContainer = styled.div`
 `;
 
 export const CartItem = styled.div`
+
   table {
     color: black;
     width: 100%;
+    margin: 0 auto;
     font-weight: 700;
     text-align: left;
     border-spacing: 24px 21px;
@@ -29,7 +31,7 @@ export const CartItem = styled.div`
       font-size: 14px;
 
       &:last-child {
-        min-width: 200px;
+        min-width: 100px;
       }
     }
 
@@ -50,6 +52,7 @@ export const CartItem = styled.div`
         height: 26px;
         border: 1px solid #999999;
         border-radius: 4px;
+        padding:8px;
       }
 
       &:last-child {
@@ -58,4 +61,10 @@ export const CartItem = styled.div`
       }
     }
   }
+
+  hr {
+  max-width: 910px;
+  margin: 0 auto;
+  color: #999999;
+}
 `;
