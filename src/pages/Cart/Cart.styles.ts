@@ -5,13 +5,13 @@ export const CartContainer = styled.div`
   height: 286px;
   background-color: #fff;
   border-radius: 4px;
-  
+  font-weight: 700;
+
   margin: 24px auto;
 
   table {
     color: black;
     width: 100%;
-    font-weight: 700;
     text-align: left;
     border-spacing: 24px 21px;
 
@@ -30,37 +30,34 @@ export const CartContainer = styled.div`
         min-width: 100px;
       }
     }
-
-    td {
-      div {
-        display: flex;
-        align-items: center;
-
-        &:nth-child(2) {
-          display: block;
-          margin-left: 52px;
-        }
-      }
-
-      input {
-        margin: 0 11px;
-        width: 62px;
-        height: 26px;
-        border: 1px solid #999999;
-        border-radius: 4px;
-        padding: 12px;
-      }
-
-      &:last-child {
-        text-align: right;
-        padding-right: 10px;
-      }
-    }
   }
 
   hr {
-  max-width: 910px;
-  margin: 0 auto;
-  color: #999999;
-}
-`
+    max-width: 910px;
+    margin: 0 auto;
+    color: #999999;
+  }
+`;
+
+export const FooterCartContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 21px 24px;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  div > span:first-child {
+    color: #999999;
+    font-size: 14px;
+    margin-right: 24px;
+  }
+
+  div > span:last-child {
+    font-size: 24px;
+    color: #2f2e41;
+  }
+`;
