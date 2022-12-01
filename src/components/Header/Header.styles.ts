@@ -19,7 +19,13 @@ export const HeaderStyled = styled.header`
 
   div {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+
+    &.flex-column {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+    }
 
     p {
       font-size: 14px;

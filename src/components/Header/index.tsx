@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import cartIcon from '../../assets/cart-icon.png'
 import { CartContext } from '../../context/CartContext'
 import { HeaderStyled } from './Header.styles'
 
@@ -14,11 +15,19 @@ export const Header = () => {
       </Link>
 
       <div>
-        <Link to="/cart">
-          Meu carrinho
-        </Link>
-        <span>{moviesSelected.length} itens</span>
+        <div className='flex-column'>
+          <Link to="/cart">
+            Meu carrinho
+          </Link>
+          <span>{moviesSelected.length} itens</span>
+        </div>
+        <div>
+          <span>
+            <img src={cartIcon} alt="" />
+          </span>
+        </div>
       </div>
+
     </HeaderStyled>
   )
 }

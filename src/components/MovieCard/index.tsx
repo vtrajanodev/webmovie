@@ -19,7 +19,10 @@ export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
       <MovieCardInfo>
         <img src={movie.image} alt="" />
         <p>{movie.title}</p>
-        <p> {Intl.NumberFormat('pt-BR', { currency: 'BRL' }).format(movie.price)}</p>
+        <p> {new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        }).format(movie.price)}</p>
         <ButtonContainer disabled={isMovieAtCartCheck(movie.id)} onClick={() => onAddButtonClicked()} width='homeButton' variant={!isMovieAtCartCheck(movie.id) ? 'primary' : 'secondary'}>
           Adicionar ao carrinho
         </ButtonContainer>

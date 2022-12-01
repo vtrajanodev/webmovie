@@ -8,7 +8,7 @@ import { CartItemContent } from './CartItem.styles';
 interface CartItemProps {
   id?: number;
   title?: string;
-  price?: number;
+  price: number;
   image?: string;
 }
 
@@ -29,7 +29,10 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
           <img src={image} alt="" />
           <div>
             <h4>{title}</h4>
-            <span>{price}</span>
+            <span>{new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            }).format(price)}</span>
           </div>
         </div>
       </td>

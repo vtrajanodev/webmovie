@@ -4,10 +4,9 @@ export const MovieCardContainer = styled.div`
   background-color: #fff;
 
   width: 309px;
-  height: 305px;
 
   padding: 10px 11px;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 `;
 
 export const MovieCardInfo = styled.div`
@@ -18,9 +17,9 @@ export const MovieCardInfo = styled.div`
 
   font-weight: 700;
 
-img {
-  margin-bottom: 8px;
-}
+  img {
+    margin-bottom: 8px;
+  }
   color: black;
 
   p {
