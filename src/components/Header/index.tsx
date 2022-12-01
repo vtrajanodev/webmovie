@@ -1,7 +1,12 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 import { HeaderStyled } from './Header.styles'
 
 export const Header = () => {
+
+  const { moviesSelected } = useContext(CartContext)
+
   return (
     <HeaderStyled>
       <Link to="/">
@@ -12,7 +17,7 @@ export const Header = () => {
         <Link to="/cart">
           Meu carrinho
         </Link>
-        <span>0 itens</span>
+        <span>{moviesSelected.length} itens</span>
       </div>
     </HeaderStyled>
   )

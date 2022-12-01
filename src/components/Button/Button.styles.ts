@@ -5,7 +5,7 @@ export type ButtonWidth = 'homeButton' | 'emptyCartButton' | 'finalizeButton'
 
 interface ButtonContainerProps {
   variant: ButtonVariant
-  width: ButtonWidth
+  width: ButtonWidth,
 }
 
 const buttonVariants = {
@@ -25,13 +25,13 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   color: black;
   font-weight: 700;
   border: none;
-  cursor: pointer;
   color: #FFF;
 
   ${({ variant, width }) => {
     return css`
       background-color: ${buttonVariants[variant]};
       width: ${buttonWidhts[width]};
+      cursor: ${variant === 'primary' ? 'pointer' : 'not-allowed'}
     `
   }}
 `

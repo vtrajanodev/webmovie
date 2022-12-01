@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import { MovieModel } from '../../models/movie-model';
 import { ButtonContainer } from '../Button/Button.styles';
 import { MovieCardContainer, MovieCardInfo } from "./MovieCard.styles";
@@ -10,13 +12,15 @@ type MovieCardProps = {
 
 export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
 
+  const { isMovieAtCartCheck } = useContext(CartContext)
+
   return (
     <MovieCardContainer>
       <MovieCardInfo>
         <img src={movie.image} alt="" />
         <p>{movie.title}</p>
-        <p> {Intl.NumberFormat('pt-BR', {currency: 'BRL'}).format(movie.price)}</p>
-        <ButtonContainer onClick={() => onAddButtonClicked()} width='homeButton' variant='primary'>
+        <p> {Intl.NumberFormat('pt-BR', { currency: 'BRL' }).format(movie.price)}</p>
+        <ButtonContainer disabled={isMovieAtCartCheck(movie.id)} onClick={() => onAddButtonClicked()} width='homeButton' variant={!isMovieAtCartCheck(movie.id) ? 'primary' : 'secondary'}>
           Adicionar ao carrinho
         </ButtonContainer>
       </MovieCardInfo>
