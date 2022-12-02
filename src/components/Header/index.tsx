@@ -23,7 +23,7 @@ export const Header = () => {
         </div>
         <div>
           <span>
-            <img src={cartIcon} alt="" />
+            <img src={cartIcon} alt="Cart icon image" />
           </span>
         </div>
       </div>

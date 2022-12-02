@@ -9,7 +9,7 @@ export const EmptyStateCart = () => {
       <EmptyStateCartContent>
         <h1>Parece que não há nada por aqui :(</h1>
         <img src={img} alt="" />
-        <Link to="/"><Button width="emptyCartButton" buttonText="Voltar" /></Link>
+        <Link to="/"><Button variant="primary" width="emptyCartButton" buttonText="Voltar" /></Link>
       </EmptyStateCartContent>
     </EmptyStateCartContainer>
   )

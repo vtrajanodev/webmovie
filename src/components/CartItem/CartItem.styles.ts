@@ -25,5 +25,9 @@ export const CartItemContent = styled.tr`
       padding-right: 10px;
       text-align: right;
     }
+
+    button {
+      cursor: pointer;
+    }
   }
 `;

@@ -14,7 +14,7 @@ interface CartItemProps {
 
 export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-  const { handleRemoveMovieFromCart, qtd } = useContext(CartContext)
+  const { handleRemoveMovieFromCart, setMoviesQuantity } = useContext(CartContext)
   const [quantity, setQuantity] = useState(1)
 
   return (
@@ -34,12 +34,12 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       <td>
         <div>
           <button disabled={quantity === 1} onClick={() => {
-            qtd(id, quantity - 1)
+            setMoviesQuantity(id, quantity - 1)
             setQuantity(quantity - 1)
           }}><img src={minusIcon} alt="" /></button>
           <input readOnly type="text" value={quantity} />
           <button onClick={() => {
-            qtd(id, quantity + 1)
+            setMoviesQuantity(id, quantity + 1)
             setQuantity(quantity + 1)
           }}><img src={plusIcon} alt="" /></button>
         </div>
