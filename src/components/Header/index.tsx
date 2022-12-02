@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import cartIcon from '../../assets/cart-icon.png'
+import cartIcon from '../../assets/header-icon.png'
 import { CartContext } from '../../context/CartContext'
 import { HeaderStyled } from './Header.styles'
 

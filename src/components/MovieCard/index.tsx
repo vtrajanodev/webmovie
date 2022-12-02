@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import cartIcon from '../../assets/cart-icon.png';
 import { CartContext } from '../../context/CartContext';
 import { MovieModel } from '../../models/movie-model';
 import { ButtonContainer } from '../Button/Button.styles';
@@ -24,7 +25,10 @@ export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
           currency: 'BRL'
         }).format(movie.price)}</p>
         <ButtonContainer disabled={isMovieAtCartCheck(movie.id)} onClick={() => onAddButtonClicked()} width='homeButton' variant={!isMovieAtCartCheck(movie.id) ? 'primary' : 'secondary'}>
-          Adicionar ao carrinho
+          <span>
+            <img src={cartIcon} alt="" />
+            {isMovieAtCartCheck(movie.id) ? 1 : 0}
+          </span> Adicionar ao carrinho
         </ButtonContainer>
       </MovieCardInfo>
     </MovieCardContainer>

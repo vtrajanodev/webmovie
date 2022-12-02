@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import minusIcon from '../../assets/minus-icon.png';
 import plusIcon from '../../assets/plus-icon.png';
 import trashIcon from '../../assets/trash-icon.png';
@@ -6,22 +6,15 @@ import { CartContext } from '../../context/CartContext';
 import { CartItemContent } from './CartItem.styles';
 
 interface CartItemProps {
-  id?: number;
-  title?: string;
+  id: number;
+  title: string;
   price: number;
-  image?: string;
+  image: string;
 }
 
 export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
-
-  const [qtd, setQtd] = useState(1)
-
-  const handleRemoveMovieFromCart = () => {
-    const list = moviesSelected?.filter(movie => movie.id !== id)
-    setMoviesSelected(list)
-  }
+  const { handleRemoveMovieFromCart } = useContext(CartContext)
 
   return (
     <CartItemContent>
@@ -46,12 +39,12 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       </td>
       <td>
         <span>{new Intl.NumberFormat('pt-BR', {
-              style: 'currency',
-              currency: 'BRL'
-            }).format(price)}</span>
+          style: 'currency',
+          currency: 'BRL'
+        }).format(price)}</span>
       </td>
       <td>
-        <button onClick={() => handleRemoveMovieFromCart()}>
+        <button onClick={() => handleRemoveMovieFromCart(id)}>
           <img src={trashIcon} alt="" />
         </button>
       </td>

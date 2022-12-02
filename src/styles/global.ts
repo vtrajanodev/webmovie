@@ -11,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: #2F2E41;
     color: #fff;
+
+    padding-bottom: 36px;
   }
 
   body, button {
