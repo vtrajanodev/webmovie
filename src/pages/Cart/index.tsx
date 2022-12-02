@@ -11,10 +11,6 @@ export const Cart = () => {
 
   const { moviesSelected, setMoviesSelected } = useContext(CartContext)
 
-  useEffect(() => {
-    console.log(moviesSelected)
-  }, [moviesSelected])
-
   const totalPrice = useMemo(() => moviesSelected.reduce((acc, movie) => {
     return acc + movie.price * (movie?.quantity ?? 1)
   }, 0), [moviesSelected])

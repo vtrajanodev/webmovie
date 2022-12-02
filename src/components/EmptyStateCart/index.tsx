@@ -8,7 +8,7 @@ export const EmptyStateCart = () => {
     <EmptyStateCartContainer>
       <EmptyStateCartContent>
         <h1>Parece que não há nada por aqui :(</h1>
-        <img src={img} alt="" />
+        <img src={img} alt="Imagem sinalizando carrinho vazio" />
         <Link to="/"><Button variant="primary" width="emptyCartButton" buttonText="Voltar" /></Link>
       </EmptyStateCartContent>
     </EmptyStateCartContainer>

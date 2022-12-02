@@ -8,8 +8,8 @@ export const Finalize = () => {
     <FinalizePageContainer>
       <FinalizePageContent>
         <h1>Compra realizada com sucesso</h1>
-        <img src={img} alt="" />
-        <Link to="/"><Button width="emptyCartButton" buttonText="Voltar" /></Link>
+        <img src={img} alt="Imagem compra realizada" />
+        <Link to="/"><Button variant="primary" width="emptyCartButton" buttonText="Voltar" /></Link>
       </FinalizePageContent>
     </FinalizePageContainer>
   )
