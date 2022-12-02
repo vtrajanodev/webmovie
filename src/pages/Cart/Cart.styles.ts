@@ -9,7 +9,7 @@ export const CartContainer = styled.div`
   margin: 24px auto;
 
   table {
-    color: black;
+    color: #2F2E41;
     width: 100%;
     text-align: left;
     border-spacing: 24px 21px;

@@ -22,7 +22,7 @@ const buttonWidhts = {
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   height: 40px;
   border-radius: 0.2rem;
-  color: black;
+  color: #2F2E41;
   font-weight: 700;
   border: none;
   color: #FFF;

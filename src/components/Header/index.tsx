@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <HeaderStyled>
       <Link to="/">
-        <h2>Web Movies</h2>
+        <h2>WeMovies</h2>
       </Link>
 
       <div>

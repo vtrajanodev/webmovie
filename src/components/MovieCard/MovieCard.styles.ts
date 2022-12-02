@@ -20,7 +20,7 @@ export const MovieCardInfo = styled.div`
   img {
     margin-bottom: 8px;
   }
-  color: black;
+  color: #2F2E41;
 
   p {
     &:nth-child(3) {

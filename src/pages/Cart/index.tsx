@@ -9,8 +9,13 @@ import { CartContainer, FooterCartContainer } from "./Cart.styles"
 
 export const Cart = () => {
 
-  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
+  const { moviesSelected, setMoviesSelected, quantity } = useContext(CartContext)
   console.log(moviesSelected)
+
+  const totalPrice = moviesSelected.reduce((acc, movie) => {
+    return acc + movie.price * quantity;
+  }, 0)
+
 
   return (
     <>
@@ -42,13 +47,14 @@ export const Cart = () => {
             </Link>
             <div>
               <span>TOTAL</span>
-              <span>R$ 29,90</span>
+              <span>{new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        }).format(totalPrice)}</span>
             </div>
           </FooterCartContainer>
         </CartContainer>
       }
-
-
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import minusIcon from '../../assets/minus-icon.png';
 import plusIcon from '../../assets/plus-icon.png';
 import trashIcon from '../../assets/trash-icon.png';
@@ -14,7 +14,7 @@ interface CartItemProps {
 
 export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
+  const { moviesSelected, setMoviesSelected, quantity, setQuantity } = useContext(CartContext)
 
   const handleRemoveMovieFromCart = () => {
     const list = moviesSelected?.filter(movie => movie.id !== id)
@@ -38,13 +38,16 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       </td>
       <td>
         <div>
-          <button><img src={minusIcon} alt="" /></button>
-          <input type="text" value={1} />
-          <button><img src={plusIcon} alt="" /></button>
+          <button onClick={() => setQuantity(quantity - 1)}><img src={minusIcon} alt="" /></button>
+          <input type="text" value={quantity} />
+          <button onClick={() => setQuantity(quantity + 1)}><img src={plusIcon} alt="" /></button>
         </div>
       </td>
       <td>
-        <span>R$ 29,99</span>
+        <span>{new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            }).format(price * quantity)}</span>
       </td>
       <td>
         <button onClick={() => handleRemoveMovieFromCart()}>

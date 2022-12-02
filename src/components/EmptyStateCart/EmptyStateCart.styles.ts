@@ -17,7 +17,7 @@ align-items: center;
 
   h1 {
     font-size: 20px;
-    color: black;
+    color: #2F2E41;
     font-weight: 700;
     margin-bottom: 32px;
   }
