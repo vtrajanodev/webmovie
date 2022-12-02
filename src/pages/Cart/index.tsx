@@ -9,11 +9,10 @@ import { CartContainer, FooterCartContainer } from "./Cart.styles"
 
 export const Cart = () => {
 
-  const { moviesSelected, setMoviesSelected, quantity } = useContext(CartContext)
-  console.log(moviesSelected)
+  const { moviesSelected, setMoviesSelected} = useContext(CartContext)
 
   const totalPrice = moviesSelected.reduce((acc, movie) => {
-    return acc + movie.price * quantity;
+    return acc + movie.price;
   }, 0)
 
 

@@ -9,8 +9,6 @@ interface CartContextData {
   moviesSelected: MovieModel[]
   setMoviesSelected: Function,
   isMovieAtCartCheck: (id: number) => boolean;
-  quantity: number;
-  setQuantity: Function;
 
 }
 
@@ -18,7 +16,6 @@ export const CartContext = createContext({} as CartContextData)
 
 export const CartContextProvider = ({ children }: CartContextProviderProps) => {
   const [moviesSelected, setMoviesSelected] = useState<MovieModel[]>([])
-  const [quantity, setQuantity] = useState(1)
 
 
   const isMovieAtCartCheck = (id: number): boolean => {
@@ -27,7 +24,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
   }
 
   return (
-    <CartContext.Provider value={{ moviesSelected, setMoviesSelected, isMovieAtCartCheck, quantity, setQuantity }}>
+    <CartContext.Provider value={{ moviesSelected, setMoviesSelected, isMovieAtCartCheck }}>
       {children}
     </CartContext.Provider>
   )

@@ -14,11 +14,12 @@ interface CartItemProps {
 
 export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-  const { moviesSelected, setMoviesSelected, quantity, setQuantity } = useContext(CartContext)
+  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
+
+  const [qtd, setQtd] = useState(1)
 
   const handleRemoveMovieFromCart = () => {
     const list = moviesSelected?.filter(movie => movie.id !== id)
-    console.log(moviesSelected)
     setMoviesSelected(list)
   }
 
@@ -38,16 +39,16 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       </td>
       <td>
         <div>
-          <button onClick={() => setQuantity(quantity - 1)}><img src={minusIcon} alt="" /></button>
-          <input type="text" value={quantity} />
-          <button onClick={() => setQuantity(quantity + 1)}><img src={plusIcon} alt="" /></button>
+          <button><img src={minusIcon} alt="" /></button>
+          <input type="text" value={1} />
+          <button><img src={plusIcon} alt="" /></button>
         </div>
       </td>
       <td>
         <span>{new Intl.NumberFormat('pt-BR', {
               style: 'currency',
               currency: 'BRL'
-            }).format(price * quantity)}</span>
+            }).format(price)}</span>
       </td>
       <td>
         <button onClick={() => handleRemoveMovieFromCart()}>
