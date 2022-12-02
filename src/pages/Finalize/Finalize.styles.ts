@@ -9,19 +9,18 @@ export const FinalizePageContainer = styled.div`
 `;
 
 export const FinalizePageContent = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 64px;
 
-
   h1 {
-    color: #2f2e41;
+    margin-bottom: 32px;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 32px;
+    
+    color: #2f2e41;
   }
 
   img {

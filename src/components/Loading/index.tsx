@@ -1,5 +1,5 @@
-import { LoadingContainer } from './Loading.styles'
 import loadingIcon from '../../assets/loading-icon.png'
+import { LoadingContainer } from './Loading.styles'
 
 
 export const Loading = () => {

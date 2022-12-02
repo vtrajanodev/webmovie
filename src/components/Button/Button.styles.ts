@@ -20,16 +20,15 @@ const buttonWidhts = {
 };
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
-  height: 40px;
-  border-radius: 0.2rem;
-  color: #2f2e41;
-  font-weight: 700;
-  border: none;
-  color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
+  
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0.2rem;
+  border: none;
 
   ${({ variant, width }) => {
     return css`
@@ -44,8 +43,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     align-items: center;
     align-self: center;
     justify-content: center;
-    font-size: 12px;
     margin-right: 12px;
+
+    font-size: 12px;
     font-weight: 400;
 
     img {

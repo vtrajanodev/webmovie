@@ -6,6 +6,6 @@ export const api = axios.create({
 });
 
 export const getMovies = async (): Promise<MovieModel[]> => {
-  const { data } = await api.get("http://localhost:3000/products")
-  return data
+  const { data } = await api.get("http://localhost:3000/products");
+  return data;
 };

@@ -50,9 +50,9 @@ export const Cart = () => {
             <div>
               <span>TOTAL</span>
               <span>{new Intl.NumberFormat('pt-BR', {
-          style: 'currency',
-          currency: 'BRL'
-        }).format(totalPrice)}</span>
+                style: 'currency',
+                currency: 'BRL'
+              }).format(totalPrice)}</span>
             </div>
           </FooterCartContainer>
         </CartContainer>

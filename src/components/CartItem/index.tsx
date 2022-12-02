@@ -40,7 +40,8 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
           <input readOnly type="text" value={quantity} />
           <button onClick={() => {
             qtd(id, quantity + 1)
-            setQuantity(quantity + 1)}}><img src={plusIcon} alt="" /></button>
+            setQuantity(quantity + 1)
+          }}><img src={plusIcon} alt="" /></button>
         </div>
       </td>
       <td>

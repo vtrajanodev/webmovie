@@ -23,9 +23,9 @@ export const Home = () => {
       const data = await getMovies()
       setMovies(data)
     } catch {
-      alert('erro')
+      alert('Não foi possível carregar os filmes, atualize a pagina para uma nova requisição.')
     } finally {
-      // setLoading(false)
+      setLoading(false)
     }
   }
 
