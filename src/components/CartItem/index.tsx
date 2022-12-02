@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import minusIcon from '../../assets/minus-icon.png';
 import plusIcon from '../../assets/plus-icon.png';
 import trashIcon from '../../assets/trash-icon.png';
@@ -16,6 +16,8 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
   const { handleRemoveMovieFromCart } = useContext(CartContext)
 
+  const [quantity, setQuantity] = useState(1)
+
   return (
     <CartItemContent>
       <td>
@@ -32,9 +34,9 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       </td>
       <td>
         <div>
-          <button><img src={minusIcon} alt="" /></button>
-          <input type="text" value={1} />
-          <button><img src={plusIcon} alt="" /></button>
+          <button disabled={quantity === 1} onClick={() => setQuantity(quantity - 1)}><img src={minusIcon} alt="" /></button>
+          <input type="text" value={quantity} />
+          <button onClick={() => setQuantity(quantity + 1)}><img src={plusIcon} alt="" /></button>
         </div>
       </td>
       <td>
