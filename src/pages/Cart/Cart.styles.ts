@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const CartContainer = styled.div`
   max-width: 960px;
-  background-color: #fff;
-  border-radius: 4px;
-  font-weight: 700;
-
   margin: 24px auto;
 
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 4px;
+
+
   table {
-    color: black;
     width: 100%;
-    text-align: left;
     border-spacing: 24px 21px;
+    text-align: left;
+
+    color: #2f2e41;
 
     button {
       width: 18px;
@@ -22,8 +24,8 @@ export const CartContainer = styled.div`
     }
 
     th {
-      color: #999999;
       font-size: 14px;
+      color: #999999;
 
       &:last-child {
         min-width: 100px;
@@ -34,6 +36,7 @@ export const CartContainer = styled.div`
   hr {
     max-width: 910px;
     margin: 0 auto;
+    
     color: #999999;
   }
 `;
@@ -51,9 +54,9 @@ export const FooterCartContainer = styled.div`
   }
 
   div > span:first-child {
-    color: #999999;
-    font-size: 14px;
     margin-right: 24px;
+    font-size: 14px;
+    color: #999999;
   }
 
   div > span:last-child {

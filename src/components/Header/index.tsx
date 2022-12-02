@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import cartIcon from '../../assets/cart-icon.png'
+import cartIcon from '../../assets/header-icon.png'
 import { CartContext } from '../../context/CartContext'
 import { HeaderStyled } from './Header.styles'
 
@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <HeaderStyled>
       <Link to="/">
-        <h2>Web Movies</h2>
+        <h2>WeMovies</h2>
       </Link>
 
       <div>
@@ -23,7 +23,7 @@ export const Header = () => {
         </div>
         <div>
           <span>
-            <img src={cartIcon} alt="" />
+            <img src={cartIcon} alt="Cart icon image" />
           </span>
         </div>
       </div>

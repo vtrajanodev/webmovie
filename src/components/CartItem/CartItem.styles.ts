@@ -13,17 +13,21 @@ export const CartItemContent = styled.tr`
     }
 
     input {
-      margin: 0 11px;
       width: 62px;
       height: 26px;
+      margin: 0 11px;
+      padding: 12px;
       border: 1px solid #999999;
       border-radius: 4px;
-      padding: 12px;
     }
 
     &:last-child {
-      text-align: right;
       padding-right: 10px;
+      text-align: right;
+    }
+
+    button {
+      cursor: pointer;
     }
   }
 `;

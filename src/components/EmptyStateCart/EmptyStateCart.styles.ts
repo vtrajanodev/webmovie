@@ -1,4 +1,3 @@
-import { EmptyStateCart } from './index';
 import styled from "styled-components";
 
 export const EmptyStateCartContainer = styled.div`
@@ -7,24 +6,24 @@ export const EmptyStateCartContainer = styled.div`
   margin: 24px auto 24px;
   padding: 64px;
 
-  background-color: #FFF;
-`
+  background-color: #fff;
+`;
 
 export const EmptyStateCartContent = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
-    font-size: 20px;
-    color: black;
-    font-weight: 700;
     margin-bottom: 32px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: #2f2e41;
   }
 
   img {
     display: block;
     margin-bottom: 32px;
   }
-
-`
+`;

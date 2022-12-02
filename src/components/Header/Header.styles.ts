@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  max-width: 960px;
-  margin: 24px auto;
-  color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 960px;
+  margin: 24px auto;
+  
+  color: #fff;
+
   h1 {
     font-size: 1.25rem;
   }
 
   p {
-    font-weight: 600;
     font-size: 0.875rem;
+    font-weight: 600;
   }
 
   div {
@@ -32,9 +33,9 @@ export const HeaderStyled = styled.header`
     }
 
     span {
-      color: #999999;
       align-self: flex-end;
       font-size: 12px;
+      color: #999999;
     }
   }
 `;

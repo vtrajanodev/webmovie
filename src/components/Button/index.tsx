@@ -1,8 +1,8 @@
 import { ButtonContainer, ButtonVariant, ButtonWidth } from './Button.styles'
 interface ButtonProps {
-  variant?: ButtonVariant
-  width?: ButtonWidth
-  buttonText?: string
+  variant: ButtonVariant
+  width: ButtonWidth
+  buttonText: string
   onClick?: Function
 }
 

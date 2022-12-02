@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import minusIcon from '../../assets/minus-icon.png';
 import plusIcon from '../../assets/plus-icon.png';
 import trashIcon from '../../assets/trash-icon.png';
@@ -6,27 +6,22 @@ import { CartContext } from '../../context/CartContext';
 import { CartItemContent } from './CartItem.styles';
 
 interface CartItemProps {
-  id?: number;
-  title?: string;
+  id: number;
+  title: string;
   price: number;
-  image?: string;
+  image: string;
 }
 
 export const CartItem = ({ id, title, price, image }: CartItemProps) => {
 
-  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
-
-  const handleRemoveMovieFromCart = () => {
-    const list = moviesSelected?.filter(movie => movie.id !== id)
-    console.log(moviesSelected)
-    setMoviesSelected(list)
-  }
+  const { handleRemoveMovieFromCart, setMoviesQuantity } = useContext(CartContext)
+  const [quantity, setQuantity] = useState(1)
 
   return (
     <CartItemContent>
       <td>
         <div>
-          <img src={image} alt="" />
+          <img src={image} alt="Capa do filme" />
           <div>
             <h4>{title}</h4>
             <span>{new Intl.NumberFormat('pt-BR', {
@@ -38,17 +33,26 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       </td>
       <td>
         <div>
-          <button><img src={minusIcon} alt="" /></button>
-          <input type="text" value={1} />
-          <button><img src={plusIcon} alt="" /></button>
+          <button disabled={quantity === 1} onClick={() => {
+            setMoviesQuantity(id, quantity - 1)
+            setQuantity(quantity - 1)
+          }}><img src={minusIcon} alt="Botão menos" /></button>
+          <input readOnly type="text" value={quantity} />
+          <button onClick={() => {
+            setMoviesQuantity(id, quantity + 1)
+            setQuantity(quantity + 1)
+          }}><img src={plusIcon} alt="Botão mais" /></button>
         </div>
       </td>
       <td>
-        <span>R$ 29,99</span>
+        <span>{new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        }).format(price * quantity)}</span>
       </td>
       <td>
-        <button onClick={() => handleRemoveMovieFromCart()}>
-          <img src={trashIcon} alt="" />
+        <button onClick={() => handleRemoveMovieFromCart(id)}>
+          <img src={trashIcon} alt="Botão remover" />
         </button>
       </td>
     </CartItemContent>

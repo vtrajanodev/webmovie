@@ -9,8 +9,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    padding-bottom: 36px;
+
     background: #2F2E41;
     color: #fff;
+
   }
 
   body, button {
@@ -21,9 +24,5 @@ export const GlobalStyle = createGlobalStyle`
   a {
       text-decoration: none;
       color: #fff;
-    }
-
-    button {
-      cursor: pointer;
     }
 `;

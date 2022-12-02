@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonContainer } from '../../components/Button/Button.styles'
 import { CartItem } from '../../components/CartItem'
@@ -10,7 +10,10 @@ import { CartContainer, FooterCartContainer } from "./Cart.styles"
 export const Cart = () => {
 
   const { moviesSelected, setMoviesSelected } = useContext(CartContext)
-  console.log(moviesSelected)
+
+  const totalPrice = useMemo(() => moviesSelected.reduce((acc, movie) => {
+    return acc + movie.price * (movie?.quantity ?? 1)
+  }, 0), [moviesSelected])
 
   return (
     <>
@@ -42,13 +45,14 @@ export const Cart = () => {
             </Link>
             <div>
               <span>TOTAL</span>
-              <span>R$ 29,90</span>
+              <span>{new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+              }).format(totalPrice)}</span>
             </div>
           </FooterCartContainer>
         </CartContainer>
       }
-
-
     </>
   )
 }
