@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonContainer } from '../../components/Button/Button.styles'
 import { CartItem } from '../../components/CartItem'
@@ -9,12 +9,15 @@ import { CartContainer, FooterCartContainer } from "./Cart.styles"
 
 export const Cart = () => {
 
-  const { moviesSelected, setMoviesSelected} = useContext(CartContext)
+  const { moviesSelected, setMoviesSelected } = useContext(CartContext)
 
-  const totalPrice = moviesSelected.reduce((acc, movie) => {
-    return acc + movie.price;
-  }, 0)
+  useEffect(() => {
+    console.log(moviesSelected)
+  }, [moviesSelected])
 
+  const totalPrice = useMemo(() => moviesSelected.reduce((acc, movie) => {
+    return acc + movie.price * (movie?.quantity ?? 1)
+  }, 0), [moviesSelected])
 
   return (
     <>

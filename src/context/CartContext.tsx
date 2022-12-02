@@ -10,6 +10,7 @@ interface CartContextData {
   setMoviesSelected: Function,
   isMovieAtCartCheck: (id: number) => boolean;
   handleRemoveMovieFromCart: (id: number) => void;
+  qtd: (id: number, quantity: number) => void;
 }
 
 export const CartContext = createContext({} as CartContextData)
@@ -22,12 +23,21 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
     setMoviesSelected(list)
   }
 
+  const qtd = (id: number, quantity: number) => {
+    const meusFilmes = [...moviesSelected]
+    const index = meusFilmes.findIndex(movie => movie.id === id)
+    const filme = meusFilmes[index]
+    filme.quantity = quantity
+    meusFilmes[index] = filme
+    setMoviesSelected([...meusFilmes])
+  }
+
   const isMovieAtCartCheck = (id: number): boolean => {
     return moviesSelected.some(movie => movie.id === id)
   }
 
   return (
-    <CartContext.Provider value={{ moviesSelected, setMoviesSelected, isMovieAtCartCheck, handleRemoveMovieFromCart }}>
+    <CartContext.Provider value={{ moviesSelected, setMoviesSelected, isMovieAtCartCheck, handleRemoveMovieFromCart, qtd }}>
       {children}
     </CartContext.Provider>
   )

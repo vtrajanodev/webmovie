@@ -1,8 +1,9 @@
 import { LoadingContainer } from './Loading.styles'
+import loadingIcon from '../../assets/loading-icon.png'
 
 
 export const Loading = () => {
   return (
-    <LoadingContainer>Loading...</LoadingContainer>
+    <LoadingContainer><img src={loadingIcon} alt="" /></LoadingContainer>
   )
 }

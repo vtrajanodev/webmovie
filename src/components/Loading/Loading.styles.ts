@@ -8,8 +8,13 @@ export const LoadingContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  font-size: 40px;
-  color: #000 ;
-  font-weight: bold;
-  background-color: #FFF;
+  animation: rotate-spinner 1s linear;
+  animation-iteration-count: infinite;
+
+
+@keyframes rotate-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 `;

@@ -25,7 +25,7 @@ export const Home = () => {
     } catch {
       alert('erro')
     } finally {
-      setLoading(false)
+      // setLoading(false)
     }
   }
 
