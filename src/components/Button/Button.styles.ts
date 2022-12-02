@@ -24,6 +24,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   align-items: center;
   justify-content: center;
   height: 40px;
+  font-size: 12px;
   
   font-weight: 700;
   color: #fff;
@@ -35,6 +36,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background-color: ${buttonVariants[variant]};
       width: ${buttonWidhts[width]};
       cursor: ${variant === "primary" ? "pointer" : "not-allowed"};
+      font-size: ${width !== "homeButton" ? "14px" : "12px"} ;
     `;
   }}
 

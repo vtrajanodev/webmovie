@@ -28,7 +28,7 @@ export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
           <span>
             <img src={cartIcon} alt="Ícone de carrinho" />
             {isMovieAtCartCheck(movie.id) ? 1 : 0}
-          </span> Adicionar ao carrinho
+          </span> {!isMovieAtCartCheck(movie.id) ? "ADICIONAR AO CARRINHO" : "ITEM ADICIONADO"}
         </ButtonContainer>
       </MovieCardInfo>
     </MovieCardContainer>

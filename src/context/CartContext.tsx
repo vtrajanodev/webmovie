@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useCallback, useState } from "react";
 import { MovieModel } from "../models/movie-model";
 
 interface CartContextProviderProps {
@@ -18,10 +18,10 @@ export const CartContext = createContext({} as CartContextData)
 export const CartContextProvider = ({ children }: CartContextProviderProps) => {
   const [moviesSelected, setMoviesSelected] = useState<MovieModel[]>([])
 
-  const handleRemoveMovieFromCart = (id: number) => {
+  const handleRemoveMovieFromCart = useCallback((id: number) => {
     const list = moviesSelected?.filter(movie => movie.id !== id)
     setMoviesSelected(list)
-  }
+  }, [moviesSelected])
 
   const setMoviesQuantity = (id: number, newQuantity: number) => {
     const moviesOnCart = [...moviesSelected]
