@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from 'react'
+import { useContext, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonContainer } from '../../components/Button/Button.styles'
 import { CartItem } from '../../components/CartItem'
