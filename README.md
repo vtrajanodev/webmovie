@@ -1,6 +1,6 @@
 # WeMovies
 
-Neste projeto teste da WeFit Digital Service Design foi solicitado que fosse desenvolvido um layout referente ao que representa um e-comerce de filmes. Nesta funcinalidade o projeto conta com funcionamento de classes dinâmicas para estilização e filmes renderizados através do consumo de uma FAKE API onde foi fornecid o arquivo .json e simulado utilizando json-server. 
+Neste projeto teste da WeFit Digital Service Design foi solicitado que fosse desenvolvido um layout referente ao que representa um e-comerce de filmes. Nesta funcionalidade o projeto conta com funcionamento de classes dinâmicas para estilização e filmes renderizados através do consumo de uma FAKE API onde foi fornecido o arquivo .json e simulado utilizando json-server. 
 
 ## 🚀 Começando
 
@@ -14,7 +14,6 @@ Para baixar o projeto e funcionar de forma correta, é necessário que faça o c
 git clone https://github.com/vtrajanodev/webmovie.git
 
 ```
-
 
 ### 📋 Pré-requisitos
 
@@ -42,7 +41,7 @@ yarn
 yarn start
 
 
-Após as depêndencias serem instaladas, é necessário inicializar o servidor apontando para o arquivo movies.json que servirá como a FAKE API e será consumida no projeto, para isso, utilze a biblioteca json-server.:
+Após as depêndencias serem instaladas, é necessário inicializar o servidor apontando para o arquivo movies.json que servirá como a FAKE API e será consumida no projeto, para isso, utilze a biblioteca json-server.
 
 instalação do json-server: npm install -g json-server
 
@@ -55,7 +54,7 @@ Após instalado execute o comando para inicializar o servidor: json-server --wat
 Ferramentas utilizadas para desenvolvimento do projeto.
 
 * [Vite] - ferramenta de construção do projeto frontend. Responsável pela criação das primeiras estruturas de pastas do projeto e build do mesmo. O vite conta com uma velocidade de até 100x mais rápida em build devido a tecnologia dos seus bundlers.
-* [npm] - Utilizado para gerenciar dependências na instalação e execução de novos pacotes e execução do projeto como gerente de dependências
+* [npm] - Utilizado para gerenciar dependências na instalação e execução de novos pacotes e execução do projeto como gerente de dependências.
 * [react-router-dom] - Utilizado para gerenciar todo sistema de rotas do front end, utilizando conceito de rotas encadeadas, default layout através do componente outlet em páginas que se repetem, além de redirecionar URL's que trariam um erro 404 para o componente Home.
 * [Styled-components] - Biblioteca que possibilita escrever códigos CSS dentro do JavaScript ganhando mais agilidade e precisão no desenvolvimento web, facilitando criação de temas, definição de cores padrão entre outros benefícios.
 * [Axios] - Cliente HTTP baseado em Promises para fazer requisições a API fornecida.
