@@ -75,15 +75,15 @@ Ferramentas utilizadas para desenvolvimento do projeto.
 
 * Rotas protegidas de forma que o usuário não consegue cair em uma rota a partir do domínio utilizado e se deparar com um erro 404 - not found. Caso o usuário acesse uma rota não existente o mesmo é redirecionado para home automáticamente. 
 
-* Utilização do Styled components
+* Utilização do Styled components, css-in-js para dinamismo de classes e aproveitamento de funçoes javascript na folha de estilos.
 
 * Separação de arquivos de componentes, páginas e estilos para fácil manuntenção do código.
 
-* Utilização de @keyframes para animação no SCSS em utilização no componente de loading.
+* Utilização de @keyframes para animação no CSS em utilização no componente de loading.
 
 ## 🎁 Expressão de gratidão
 
-* Agradecimentos aos gestores da WeFit Digital Service Design e em especial a Pétala a qual me fez o contato referente a vaga de frontend e fez o encaminhamento do teste me tirando todas as dúvidas de forma simples e objetiva. 
+* Agradecimentos aos gestores da WeFit Digital Service Design e em especial a Pérola a qual me fez o contato referente a vaga de frontend e fez o encaminhamento do teste me tirando todas as dúvidas de forma simples e objetiva. 
 
 
 ---
